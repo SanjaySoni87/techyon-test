@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <a href="#" class="header__logo">VENIA</a>
+                    <nav id="header_nav" class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item header__nav-item--active">
+                                <a href="#" class="header__nav-link header__nav-link--active">Home</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Woman</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Man</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Smart Gear</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Accessories</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <span id="toggle_btn" class="header__toggle-btn"><i class="fa-solid fa-bars"></i></span>
+                    <div class="header__cart">
+                        <span class="header__cart-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+                        <span class="header__cart-badge">3</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="site-content">
+            <div class="banner">
+                <div class="banner__content">
+                    <h2 class="banner__title">Men's Outerwear</h2>
+                    <div class="banner__underline"></div>
+                </div>
+                <div class="banner__image">
+                    <img src="./images/banner_img.png" alt="Men's Outerwear">
+                </div>
+            </div>
+        </div>
+        <!-- Product List and Filter -->
+        <div class="container">
+            <div class="product-wrapper">
+                <aside class="filter">
+                    <nav class="breadcrumb breadcrumb__desktop">
+                        <ul class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Clothing</a></li>
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Women's</a></li>
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Outerwear</a></li>
+                        </ul>
+                    </nav>
+                    <h2 class="filter__title">Filters <span id="close_btn" class="filter__close-btn">&times;</span></h2>
+                    <div class="filter__categories">
+                        <h3 class="filter__categories-title">Categories</h3> <label class="filter__categories-item">
+                            <input type="checkbox" name="category" value="jewellery" class="filter__checkbox"> Jewellery
+                        </label> <label class="filter__categories-item"> <input type="checkbox" name="category"
+                                value="electronics" class="filter__checkbox">
+                            Electronics </label> <label class="filter__categories-item"> <input type="checkbox"
+                                name="category" value="mens-clothing" class="filter__checkbox"> Men's Clothing </label>
+                        <label class="filter__categories-item"> <input type="checkbox" name="category"
+                                value="womens-clothing" class="filter__checkbox">
+                            Women's Clothing </label>
+                        <div class="filter__categories-all">
+                            <button type="button" class="filter__products--btn">SEE <span
+                                    id="filter__categories--all-filtered">0</span> RESULTS</button>
+                        </div>
+                    </div>
+                </aside>
+                <main class="products">
+                    <nav class="breadcrumb breadcrumb__mobile">
+                        <ul class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Clothing</a></li>
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Women's</a></li>
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Outerwear</a></li>
+                        </ul>
+                    </nav>
+                    <div class="products__header">
+                        <h5 id="mob_filter" class="products__title products__mobile--filter"><img
+                                src="./images/filter_img.png" alt="">Filter Results</h5>
+                        <h5 class="products__title products__title--mobile">Results <span
+                                class="products__desktop-filter" id="products__total"></span></h5>
+                        <select class="products__sort" id="sortPrice">
+                            <option value="asc">Sort by Price: Low to High</option>
+                            <option value="desc">Sort by Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="products__list" id="productList"> <!-- All Products will be display here -->
+                    </div>
+                    <nav class="pagination"> <button class="pagination__button pagination__button--prev"
+                            disabled>&#8249;</button>
+                        <div class="pagination__pages"> <!-- Page numbers will be display here --> </div> <button
+                            class="pagination__button pagination__button--next">&#8250;</button>
+                    </nav>
+                    <div class="product-list"> <!-- Products will be display here --> </div>
+                </main>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section footer__section--account">
+                    <h3 class="footer__title">Account</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Sign In</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Register</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Order Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--about">
+                    <h3 class="footer__title">About Us</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Our Story</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--help">
+                    <h3 class="footer__title">Help</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Order Status</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--follow">
+                    <h3 class="footer__title">Follow Us!</h3>
+                    <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="footer__icon"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__container">
+                    <div class="footer__logo"><h3>VENIA</h3></div>
+                    <p class="footer__copyright">
+                        © Company Name Address Ave, City Name, State ZIP
+                    </p>
+                    <div class="footer__policies">
+                        <a href="#" class="footer__policy-link">Terms of Use</a>
+                        <a href="#" class="footer__policy-link">Privacy Policy</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <div class="overlaay"></div>
+    <script src="./js/script.js"></script>
+    <script>
+        // Navigation Toggle script
+        document.getElementById('toggle_btn').addEventListener('click', function () {
+            var content = document.getElementById('header_nav');
+            if (content.classList.contains('header__nav--show')) {
+                content.classList.remove('header__nav--show');
+            } else {
+                content.classList.add('header__nav--show');
+            }
+        });
+    </script>
+</body>
+
+</html>
